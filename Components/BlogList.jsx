@@ -8,10 +8,10 @@ const BlogList = () => {
   return (
     <>
     <div className='flex justify-center gap-6 my-10'>
-    <button className={menu==='All'?'bg-black text-white py-1 px-4 rounded-sm':""} onClick={()=>setMenu("All")}>All</button>
-    <button className={menu==='Technology'?'bg-black text-white py-1 px-4 rounded-sm':""} onClick={()=>setMenu("Technology")}>Technology</button>
-    <button className={menu==='Startup'?'bg-black text-white py-1 px-4 rounded-sm':""} onClick={()=>setMenu("Startup")}>Startup</button>
-    <button className={menu==='Lifestyle'?'bg-black text-white py-1 px-4 rounded-sm':""} onClick={()=>setMenu("Lifestyle")}>Lifestyle</button>
+    <button className={`cursor-pointer ${menu==='All'?'bg-black text-white py-1 px-4 rounded-sm':""}`} onClick={()=>setMenu("All")}>All</button>
+    <button className={`cursor-pointer ${menu==='Technology'?'bg-black text-white py-1 px-4 rounded-sm':""}`} onClick={()=>setMenu("Technology")}>Technology</button>
+    <button className={`cursor-pointer ${menu==='Startup'?'bg-black text-white py-1 px-4 rounded-sm':""}`} onClick={()=>setMenu("Startup")}>Startup</button>
+    <button className={`cursor-pointer ${menu==='Lifestyle'?'bg-black text-white py-1 px-4 rounded-sm':""}`} onClick={()=>setMenu("Lifestyle")}>Lifestyle</button>
     </div>
     <div className='flex flex-wrap justify-around gap-1 gap-y-10 mb-16 lg:mx-24'>
         {blog_data.filter((item)=>menu==="All" ? true:item.category===menu).map((item,index)=>{
